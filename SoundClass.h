@@ -24,9 +24,7 @@ public:
 private:
 	HWND m_hWnd;
 	OutputStreamPtr* m_soundData;
+	OutputStreamPtr* m_soundData2;
 	AudioDevicePtr* m_audioDevice;
-	IDirectSound8* m_DirectSound;
-	IDirectSoundBuffer* m_primaryBuffer;
-	IDirectSoundBuffer8* m_secondaryBuffer1;
 };
 

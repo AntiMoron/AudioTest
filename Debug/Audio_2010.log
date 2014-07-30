@@ -1,4 +1,4 @@
-﻿生成启动时间为 2014/7/29 17:40:24。
+﻿生成启动时间为 2014/7/30 10:26:40。
      1>项目“D:\Projects\Audio\Audio_2010.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Software\VS2013\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /ZI /nologo /W0 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  Audio.cpp SoundClass.cpp
@@ -15,4 +15,4 @@
 
 生成成功。
 
-已用时间 00:00:13.61
+已用时间 00:00:03.86
