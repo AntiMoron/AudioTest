@@ -4,6 +4,7 @@
 #include<dsound.h>
 #include<audiere.h>
 #include<vector>
+#include<thread>
 using namespace audiere;
 #pragma comment(lib, "audiere.lib")
 #pragma comment(lib, "dsound.lib")
@@ -21,7 +22,6 @@ public:
 
 	bool Play();
 private:
-	std::vector<int> m_source;
 	HWND m_hWnd;
 	OutputStreamPtr* m_soundData;
 	AudioDevicePtr* m_audioDevice;

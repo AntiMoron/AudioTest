@@ -246,6 +246,7 @@ void Render()
 //--------------------------------------------------------------------------------------
 void CleanupDevice()
 {
+
     if( g_pImmediateContext ) g_pImmediateContext->ClearState();
 
     if( g_pRenderTargetView ) g_pRenderTargetView->Release();

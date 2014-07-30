@@ -51,6 +51,7 @@ HRESULT SoundClass::Initialize(HWND hwnd)
 	{
 		return hr;
 	}
+
 	//Read Sound File right now;
 	m_audioDevice = new AudioDevicePtr(OpenDevice());
 	if (m_audioDevice == nullptr)
@@ -58,34 +59,18 @@ HRESULT SoundClass::Initialize(HWND hwnd)
 		printf("No device\r\n");
 		return E_FAIL;
 	}
-	m_soundData = new OutputStreamPtr(OpenSound(*m_audioDevice, "Sober.mp3", false));
+	OutputStream* m_soundDataStream = OpenSound(*m_audioDevice, "Sober.mp3", false);
+	m_soundData = new OutputStreamPtr(m_soundDataStream);
 	if (m_soundData == nullptr)
 	{
 		printf("No Sound File Found.\r\n");
 		return E_FAIL;
 	}
 	printf("Sound Loaded Ok.\r\n");
-	
-
-	m_source.push_back(0);
-	m_source.push_back(-20);
-	m_source.push_back(-40);
-	m_source.push_back(-60);
-	//waveFormat.wFormatTag = WAVE_FORMAT_PCM;
-	//waveFormat.nSamplesPerSec = 44100;
-	//waveFormat.wBitsPerSample = 16;
-	//waveFormat.nChannels = 2;
-	//waveFormat.nBlockAlign = (waveFormat.wBitsPerSample / 8) * waveFormat.nChannels;
-	//waveFormat.nAvgBytesPerSec = waveFormat.nSamplesPerSec * waveFormat.nBlockAlign;
-	//waveFormat.cbSize = 0;
-
-	//// Set the primary buffer to be the wave format specified.
-	//hr = m_primaryBuffer->SetFormat(&waveFormat);
-	//if (FAILED(hr))
-	//{
-	//	return false;
-	//}
-
+	int channel_count, sample_rate;
+	SampleFormat sf;
+	SampleSource x; x.getFormat(channel_count, sample_rate, sf);
+	printf("Sound Length : %d",(*m_soundData)->getLength() / channel_count);
 	return hr;
 }
 
@@ -111,9 +96,6 @@ HRESULT SoundClass::Shutdown()
 
 bool SoundClass::Play()
 {
-	if ((*m_soundData)->getPosition() <= (*m_soundData)->getLength())
-		(*m_soundData)->play();
-	else
-		(*m_soundData)->stop();
-	return (*m_soundData)->getPosition() <= (*m_soundData)->getLength();
+	(*m_soundData)->play();
+	return true;
 }
