@@ -1,0 +1,17 @@
+﻿生成启动时间为 2014/7/25 10:41:11。
+     1>项目“D:\Projects\Audio\Audio_2010.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Software\VS2013\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /Zi /nologo /W0 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  SoundClass.cpp
+         SoundClass.cpp
+       Link:
+         D:\Software\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Projects\Audio\Release\Audio.exe" /INCREMENTAL:NO /NOLOGO d3d11.lib d3dcompiler.lib d3dx11.lib d3dx9.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:D:\Software\VS2013\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"D:\Projects\Audio\Release\Audio.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Projects\Audio\Release\Audio.lib" /MACHINE:X86 /SAFESEH  Release\Audio.res
+         Release\Audio.obj
+         Release\SoundClass.obj
+         正在生成代码
+         已完成代码的生成
+         Audio_2010.vcxproj -> D:\Projects\Audio\Release\Audio.exe
+     1>已完成生成项目“D:\Projects\Audio\Audio_2010.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.12
